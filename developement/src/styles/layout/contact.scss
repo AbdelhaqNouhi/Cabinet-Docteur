@@ -1,0 +1,82 @@
+@use "../abstracts/" as *;
+
+.contact {
+  width: 100%;
+  margin: 1rem auto;
+  padding: 1.5rem;
+  display: flex;
+  gap: 5rem;
+  justify-content: space-between;
+  flex-direction: column-reverse;
+
+  @include tablet {
+    display: flex;
+    gap: 5rem;
+    flex-direction: column-reverse;
+    padding: 1.5rem 5%;
+  }
+  @include desktop {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    padding: 5rem 10%;
+    margin: 1.5rem auto;
+  }
+
+  // .information  {
+  h4 {
+    margin: 5rem 0 6rem 0;
+    color: $primary-color;
+  }
+
+  .help {
+    display: flex;
+    gap: 4rem;
+    padding: 1rem 2rem;
+    border-radius: 1rem;
+    border: $primary-text-color 1px solid;
+    margin: 5rem 0;
+    img {
+      width: 1.2rem;
+    }
+  }
+
+  .fill {
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+    width: 100%;
+    background-color: $primary-bg-color;
+    padding: 2rem 2rem;
+    border-radius: 2rem;
+
+    @include desktop {
+      width: 65rem;
+    }
+
+    h1 {
+      margin-bottom: 1rem;
+    }
+
+    .input {
+      height: 5rem;
+      border: 1px solid #e5e5e5;
+      border-radius: 1rem;
+      padding: 1rem;
+    }
+    textarea {
+      height: 10rem;
+      border: 1px solid #e5e5e5;
+      border-radius: 1rem;
+      padding: 1rem;
+    }
+    input:last-child {
+      height: 5rem;
+      border: 1px solid #e5e5e5;
+      border-radius: 1rem;
+      font-weight: bold;
+      color: $primary-bg-color;
+      background-color: $primary-color;
+    }
+  }
+}
